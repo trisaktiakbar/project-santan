@@ -17,6 +17,7 @@
     </div>
 
     <div class="card-body pb-3">
+      <p class="my-5 text-center pt-5 pb-4" v-if="!data.rekomendasiTanaman">Memproses ...</p>
       <div class="text-start pt-3 pb-5">
         <div v-for="(item, index) in data.rekomendasiTanaman" :key="index" :class="{ 'text-primary': index < 1, 'text-success': index >= 1 && index < 3, 'mb-xl-2 py-xl-1': true, h5: index < 3, h6: index >= 3 }">
           <i class="fas fa-circle"></i>&ensp;<span v-text="formatStringTanaman(item)"></span>
